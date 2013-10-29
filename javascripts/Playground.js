@@ -113,7 +113,7 @@
 			Playground.prototype.addAnimation = function(id, src, initframes, interactive) {
 
 				var that = this;
-				var loader = new PIXI.SpriteSheetLoader(src);
+				var loader = new PIXI.SpriteSheetLoader(src, true);
 				var frames = [];
 				var offsetH, offsetW;
 				
