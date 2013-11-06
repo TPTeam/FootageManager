@@ -1,4 +1,24 @@
-"use strict";
+/*
+ * Require's lookup from jQuery
+ * https://github.com/jquery/jquery/blob/master/src/intro.js
+ */
+
+var Playground;
+
+(function( window, factory ) {
+	
+	if ( typeof define === "function" && define.amd ) {
+        define( "jquery", [], function() {
+            return factory(window);
+        });
+    } else {
+    	Playground = factory( window );
+    }
+
+// Pass this, window may not be defined yet
+}(this, function( window ) {
+
+	"use strict";
 			
 			var Playground = function(containerCssSel) {
 				
@@ -109,6 +129,10 @@
 					);
 				}
 			}
+
+			Playground.prototype.center = function() {
+				//TODO
+			}
 			
 			Playground.prototype.addAnimation = function(id, src, initframes, interactive) {
 
@@ -131,6 +155,7 @@
 						that.animations[id].watch("currentFrame", function(__id,
 								oldval, newval) {
 								that.doYourPath(id,oldval,newval)
+								that.center();
 							return newval;
 						});
 					
@@ -530,3 +555,6 @@
 
 				return;
 			}
+			
+		return Playground;
+}))
