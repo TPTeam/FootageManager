@@ -2,7 +2,7 @@
  * Require's lookup from jQuery
  * https://github.com/jquery/jquery/blob/master/src/intro.js
  */
-
+/* NOT WORKING
 var Playground;
 
 (function( window, factory ) {
@@ -17,7 +17,7 @@ var Playground;
 
 // Pass this, window may not be defined yet
 }(this, function( window ) {
-
+*/
 	"use strict";
 			
 			var Playground = function(containerCssSel) {
@@ -555,6 +555,8 @@ var Playground;
 
 				return;
 			}
-			
+
+/*			
 		return Playground;
 }))
+*/
