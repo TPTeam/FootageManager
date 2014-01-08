@@ -19,7 +19,7 @@
 	</head>
 	<body>
 		<script type="text/javascript" charset="utf-8">
-			var app;
+			var app, pg;
 			
 			/*
 			 * Animation model is from http://www.blendswap.com/blends/view/6844
@@ -111,7 +111,7 @@
 					}
 				})();
 
-				var pg, gridObj, ti;
+				var gridObj, ti;
 				var dpX, dpY;
 				var takeARest;
 
@@ -123,6 +123,8 @@
 
 				pg.on('loaded', function(data) {
 
+					$('#loading').hide();
+				
 					setTimeout(function() {
 						// centering frame
 						var offsetH = (pg.size.height - pg.animations["animation"].texture.width) / 2;
@@ -354,8 +356,9 @@
 
 			})
 		</script>
-
+		
 		<div id="container" style="margin:auto;width:80%; height: 100%;">
+			<div id="loading"><img src="images/loading.gif"/></div>
 			<div id="prova1" data_playground_x="1" data_playground_y='2' class="leap_focusable left"  		style="background-color: blue; left: 30%;">
 				1 - 2
 			</div>

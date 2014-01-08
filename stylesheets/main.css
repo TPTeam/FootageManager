@@ -50,3 +50,19 @@ div:hover,div.leap_hover {
 .center {
 	left: 45%;
 }
+
+#loading {
+	position: absolute;
+	width: 70%;
+	height: 70%;
+	left: 15%;
+	top: 0;
+	pointer-events: none;
+	border: 0;
+}
+
+#loading>img {
+	width: 100%;
+	position: relative;
+	height: 100%;
+}
